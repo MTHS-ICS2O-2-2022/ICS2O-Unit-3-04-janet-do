@@ -48,7 +48,9 @@ body {
 
 #fanta-bottle {
   display: block;
+  max-width: 800px;
+  max-height: 800px;
   margin-left: 800px;
   margin-right: 500px;
-  margin-top: -500px;
+  margin-top: -300px;
 }

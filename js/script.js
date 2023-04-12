@@ -2,16 +2,19 @@
 //
 // Created by: Janet Do
 // Created on: Sep 2020
-// This file generates the area of a triangle
+// This file generates conversion from fahrenheit to celsius 
+
 "use strict"
+
 function calculate() {
   // input
-  const base = parseInt(document.getElementById("base").value)
-  const height = parseInt(document.getElementById("height").value)
+  const fahrenheit = parseInt(document.getElementById("fahrenheit ").value)
+  const zeroDegrees = 32
+  const standard = 5/9
 
   // process
-  const area = base * height / 2
+  const conversion = (fahrenheit - zeroDegrees) * standard 
 
   // output
-  document.getElementById("area").innerHTML = "Area is: " + area + " cm²"
+  document.getElementById("conversion").innerHTML ="converted to celsius is: " + conversion.toFixed(2) + "°C"
 }
