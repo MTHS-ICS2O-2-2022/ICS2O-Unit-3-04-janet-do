@@ -5,13 +5,16 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	// This function shows conversion from Fahrenheit to Celsius
 
-	var fahrenheit int
-	var celsius int
+	var fahrenheit float64
+	var celsius float64
 
 	// input
 	fmt.Println("This program shows conversion from Fahrenheit to Celsius")
@@ -20,12 +23,12 @@ func main() {
 	fmt.Scanln(&fahrenheit)
 
 	// process
-	celsius = (fahrenheit - 32) * 5/9
+	celsius = (fahrenheit - 32) * 5 / 9
 	celsius = math.Round(celsius*100) / 100 // round to 2 decimal places
 
 	// output
 	fmt.Println()
-	fmt.Println("converted to celsius is:", celsius, "℃.")
+	fmt.Printf("Converted to Celsius: %.2f ℃.\n", celsius)
 	fmt.Println()
-	fmt.Println("\nDone.")
+	fmt.Println("Done.")
 }
