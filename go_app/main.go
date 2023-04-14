@@ -21,6 +21,7 @@ func main() {
 
 	// process
 	celsius = (fahrenheit - 32) * 5/9
+	celsius = math.Round(celsius*100) / 100 // round to 2 decimal places
 
 	// output
 	fmt.Println()
