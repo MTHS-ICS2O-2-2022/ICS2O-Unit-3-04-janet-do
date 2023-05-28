@@ -21,7 +21,7 @@ function calculate() {
   const celsius = (fahrenheit - 32) * (5 / 9)
 
   // Output
-  document.getElementById("conversion").innerHTML =
+  document.getElementById("conversion").innerHTML = "f = " + fahrenheit
     "Converted to Celsius: " + celsius.toFixed(2) + "°C"
 }
 
