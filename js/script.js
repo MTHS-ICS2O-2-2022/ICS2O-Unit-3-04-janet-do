@@ -7,23 +7,22 @@
 "use strict"
 
 function calculate() {
-  // Get the radius from the query string
+  // Get the Fahrenheit value from the query string
   const urlParams = new URLSearchParams(window.location.search)
-  const radius = parseFloat(urlParams.get("r"))
+  const fahrenheit = parseFloat(urlParams.get("fahrenheit"))
 
   // Input validation
-  if (isNaN(radius)) {
-    document.getElementById("conversion").innerHTML = "Invalid radius"
+  if (isNaN(fahrenheit)) {
+    document.getElementById("conversion").innerHTML = "Invalid Fahrenheit value"
     return
   }
 
   // Process
-  const volume = (4 / 3) * Math.PI * Math.pow(radius, 3)
+  const celsius = (fahrenheit - 32) * (5 / 9)
 
   // Output
-  document.getElementById("dimension").innerHTML = "r = " + radius
-  document.getElementById("output").innerHTML =
-    "Volume: " + volume.toFixed(2) + " cm³"
+  document.getElementById("conversion").innerHTML =
+    "Converted to Celsius: " + celsius.toFixed(2) + "°C"
 }
 
 window.onload = calculate
